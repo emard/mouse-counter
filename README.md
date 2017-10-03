@@ -1,6 +1,6 @@
 # Mouse Counter
 
-Repurpose a PC mouse (USB or PS/2) on liunx to
+Repurpose a PC mouse (USB or PS/2) on linux to
 act as pulse or rotary counter.
 
 From linux uinput infrastructure it captures
