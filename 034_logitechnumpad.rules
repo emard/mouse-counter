@@ -1,0 +1,5 @@
+# run daemon when logitech unifying receiver 046d:c52b is plugged
+ACTION=="add", KERNEL=="event[0-9]*", ATTRS{name}=="Logitech USB Receiver", ATTRS{phys}=="*input0", RUN+="/bin/sh -c '/usr/local/sbin/logitechnumpad /dev/input/%k'"
+
+# uniquely create uinput remapped logitech remote
+ACTION=="add", KERNEL=="event[0-9]*", SUBSYSTEMS=="input", ATTRS{name}=="Logitech Numpad Remote", SYMLINK+="input/num_remote"
